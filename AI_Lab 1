@@ -1,0 +1,30 @@
+# 8 Puzzle Problem - Simple Python Program
+
+goal = [[1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 0]]
+
+initial = [[1, 2, 3],
+           [4, 0, 6],
+           [7, 5, 8]]
+
+print("Initial State:")
+for row in initial:
+    print(row)
+
+# Step 1: Move 5 up
+initial[1][1], initial[2][1] = initial[2][1], initial[1][1]
+
+print("\nAfter Move 1:")
+for row in initial:
+    print(row)
+
+# Step 2: Move 8 left
+initial[2][1], initial[2][2] = initial[2][2], initial[2][1]
+
+print("\nGoal State:")
+for row in initial:
+    print(row)
+
+if initial == goal:
+    print("\nPuzzle Solved!")
